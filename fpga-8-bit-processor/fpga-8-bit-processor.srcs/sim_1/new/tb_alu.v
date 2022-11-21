@@ -20,9 +20,10 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module tb_alu();
+module tb_alu;
 
-    wire RESULT, ZERO;
+    reg [7:0] RESULT;
+    reg  ZERO;
     reg SELECT, DATA1, DATA2;
     
     // Delay time = 20 * 1 ns = 20 ns
@@ -40,10 +41,12 @@ module tb_alu();
     
     initial begin
     
-        #period;
+        SELECT=1;
         DATA1 = 2;
         DATA2 = 2;
-        #period;
+        
+        #period
+        SELECT=0;
     
     end
     

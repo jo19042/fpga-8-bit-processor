@@ -20,21 +20,27 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module alu(input DATA1, input DATA2, output RESULT, input SELECT, output ZERO);
+module alu(DATA1, DATA2, RESULT, SELECT, ZERO);
     // Define inputs and outputs
-    input DATA1[7:0];
-    input DATA2[7:0];
-    input SELECT[2:0];
+    input [7:0] DATA1;
+    input [7:0] DATA2;
+    input [2:0] SELECT;
     
-    output wire RESULT;
-    output wire ZERO;
+    output reg [7:0] RESULT;
+    output reg ZERO;
     
-    // SELECT Cases
-    case(SELECT)
-        // Add
-        0: assign {ZERO,RESULT} = DATA1 + DATA2;
-        
-    endcase 
+    always @ (SELECT) begin
+    
+        // SELECT Cases
+        case(SELECT)
+            // Add
+            0       : {ZERO,RESULT} = DATA1 + DATA2;
+            default : {ZERO,RESULT} = 0;
+        endcase 
+    
+    end
+    
+
     
     
 endmodule

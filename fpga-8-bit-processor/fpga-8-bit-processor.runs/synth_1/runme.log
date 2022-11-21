@@ -1,0 +1,27 @@
+
+*** Running vivado
+    with args -log alu.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source alu.tcl
+
+
+
+****** Vivado v2021.1 (64-bit)
+  **** SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+  **** IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+source alu.tcl -notrace
+Command: synth_design -top alu -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 5324
+ERROR: [Synth 8-1002] SELECT is not a constant [C:/fpga-8-bit-processor/fpga-8-bit-processor/fpga-8-bit-processor.srcs/sources_1/new/alu.v:33]
+INFO: [Synth 8-2350] module alu ignored due to previous errors [C:/fpga-8-bit-processor/fpga-8-bit-processor/fpga-8-bit-processor.srcs/sources_1/new/alu.v:23]
+Failed to read verilog 'C:/fpga-8-bit-processor/fpga-8-bit-processor/fpga-8-bit-processor.srcs/sources_1/new/alu.v'
+INFO: [Common 17-83] Releasing license: Synthesis
+6 Infos, 0 Warnings, 0 Critical Warnings and 2 Errors encountered.
+synth_design failed
+ERROR: [Common 17-69] Command failed: Vivado Synthesis failed
+INFO: [Common 17-206] Exiting Vivado at Fri Nov 18 12:50:47 2022...
