@@ -3,5 +3,9 @@
 Jun 10 2021
 20:04:57
 C:/fpga-8-bit-processor/fpga-8-bit-processor/fpga-8-bit-processor.sim/sim_1/behav/xsim/glbl.v,1623370582,verilog,,,,glbl,,,,,,,,
+C:/fpga-8-bit-processor/fpga-8-bit-processor/fpga-8-bit-processor.srcs/sim_1/new/cpu_tb.v,1669176576,verilog,,,,cpu_tb,,,,,,,,
 C:/fpga-8-bit-processor/fpga-8-bit-processor/fpga-8-bit-processor.srcs/sim_1/new/tb_alu.v,1668798567,verilog,,,,tb_alu,,,,,,,,
+C:/fpga-8-bit-processor/fpga-8-bit-processor/fpga-8-bit-processor.srcs/sources_1/new/CPU.v,1669177621,verilog,,C:/fpga-8-bit-processor/fpga-8-bit-processor/fpga-8-bit-processor.srcs/sources_1/new/EX.v,,CPU,,,,,,,,
+C:/fpga-8-bit-processor/fpga-8-bit-processor/fpga-8-bit-processor.srcs/sources_1/new/EX.v,1669177766,verilog,,C:/fpga-8-bit-processor/fpga-8-bit-processor/fpga-8-bit-processor.srcs/sim_1/new/cpu_tb.v,C:/fpga-8-bit-processor/fpga-8-bit-processor/fpga-8-bit-processor.srcs/sources_1/new/parameters.v,EX,,,,,,,,
 C:/fpga-8-bit-processor/fpga-8-bit-processor/fpga-8-bit-processor.srcs/sources_1/new/alu.v,1668798421,verilog,,C:/fpga-8-bit-processor/fpga-8-bit-processor/fpga-8-bit-processor.srcs/sim_1/new/tb_alu.v,,alu,,,,,,,,
+C:/fpga-8-bit-processor/fpga-8-bit-processor/fpga-8-bit-processor.srcs/sources_1/new/parameters.v,1669177052,verilog,,,,,,,,,,,,

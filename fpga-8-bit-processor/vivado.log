@@ -28,3 +28,5 @@ close [ open C:/fpga-8-bit-processor/fpga-8-bit-processor/fpga-8-bit-processor.s
 add_files C:/fpga-8-bit-processor/fpga-8-bit-processor/fpga-8-bit-processor.srcs/sources_1/new/parameters.v
 update_compile_order -fileset sources_1
 update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Nov 21 15:12:12 2022...

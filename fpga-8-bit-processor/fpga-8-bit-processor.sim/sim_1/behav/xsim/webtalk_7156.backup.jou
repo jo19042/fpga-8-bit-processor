@@ -2,11 +2,11 @@
 # Webtalk v2021.1 (64-bit)
 # SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
 # IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
-# Start of session at: Tue Nov 22 22:14:46 2022
-# Process ID: 6192
+# Start of session at: Fri Nov 18 13:01:43 2022
+# Process ID: 7156
 # Current directory: C:/fpga-8-bit-processor/fpga-8-bit-processor/fpga-8-bit-processor.sim/sim_1/behav/xsim
-# Command line: wbtcv.exe -mode batch -source C:/fpga-8-bit-processor/fpga-8-bit-processor/fpga-8-bit-processor.sim/sim_1/behav/xsim/xsim.dir/cpu_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+# Command line: wbtcv.exe -mode batch -source C:/fpga-8-bit-processor/fpga-8-bit-processor/fpga-8-bit-processor.sim/sim_1/behav/xsim/xsim.dir/tb_alu_behav/webtalk/xsim_webtalk.tcl -notrace
 # Log file: C:/fpga-8-bit-processor/fpga-8-bit-processor/fpga-8-bit-processor.sim/sim_1/behav/xsim/webtalk.log
 # Journal file: C:/fpga-8-bit-processor/fpga-8-bit-processor/fpga-8-bit-processor.sim/sim_1/behav/xsim\webtalk.jou
 #-----------------------------------------------------------
-source C:/fpga-8-bit-processor/fpga-8-bit-processor/fpga-8-bit-processor.sim/sim_1/behav/xsim/xsim.dir/cpu_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+source C:/fpga-8-bit-processor/fpga-8-bit-processor/fpga-8-bit-processor.sim/sim_1/behav/xsim/xsim.dir/tb_alu_behav/webtalk/xsim_webtalk.tcl -notrace

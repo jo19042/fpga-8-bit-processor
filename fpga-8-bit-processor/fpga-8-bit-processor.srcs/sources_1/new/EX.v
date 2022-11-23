@@ -34,22 +34,19 @@ module EX(
     wire [31:0] Ain;    // rs
     wire [31:0] Bin;    // rt
     wire [5:0 ] IDEXop; // opcode
-    wire [15:0] IMM;    // immediate
 
     assign IDEXop = IDEXIR[31:26];  // get the instruction type out of DE/EX reg
-    assign funct   = IDEXIR[5:0 ];  // get the opcode in the case of R instruction, out of DE/EX reg
-    assign IMM     = IDEXIR[15:0];  // get the immediate in the case of I instruction, out of DE/EX reg
     
     initial begin
         EXMEMALUOut = 0;
         EXMEMIR = 0;
     end
     
-    always @ (posedge clk)begin     // sequential logic of EX stage, this is the ALU
+    always @ (posedge clk)begin     // sequential logic of EX stage, this is the ALU        
         if (IDEXop == ALUop)begin   // EX stage given ALU instruction
             case(IDEXIR[5:0])       // cases of opcodes
                 32: begin           // ADD (20hex)
-                    EXMEMALUOut <= Ain + Bout;
+                    EXMEMALUOut <= IDEXA + IDEXB;
                 end
                 37: begin           // OR (25hex)
                     EXMEMALUOut <= Ain | Bin;
