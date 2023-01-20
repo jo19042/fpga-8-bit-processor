@@ -21,7 +21,7 @@
 
 
 module EX(
-    input clk,
+    input clock,
     input [31:0] IDEXA, // input A from instruction decode (ID stage)
     input [31:0] IDEXB, // input B from isntruction decode (ID stage)
     input [31:0] IDEXIR, // input C from instruction decode (ID stage)

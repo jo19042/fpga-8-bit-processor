@@ -22,18 +22,46 @@
 
 module CPU(clock);
     input clock;
-    wire [31:0] IDEXA, IDEXB, IDEXIR, EXMEMALUOut, EXMEMIR; // pipeline registers
-    reg [10:0] i; // register to initialize registers
-    //reg [31:0] Regs[0:31], IMemory[0:1023], DMemory[0:1023];// registers, instruction memory, data memory
+    wire [31:0] IDEXA,                  //
+                IDEXB,                  //
+                IDEXIR,                 // ID/EX intermediate register
+                EXMEMALUOut,            // EX/MEM ALU result interediate register
+                EXMEMIR,                // EX/MEM intermediate register
+                IFIDIR;                 // IF/ID intermediate register
+                
+    reg [10:0] i;                       // register to initialize registers
+    
+    reg [31:0] Regs[0:31],              // 32, 32-bit registers
+               IMemory[0:1023],         // 1024, 23-bit instruction memory registers (1024 x 32)
+               DMemory[0:1023];         // registers, instruction memory, data memory (1024 x 32)
+               
+    wire [31:0] PC;                     // 32-bit program counter
+
+    PC uut(
+        .clock(clock),
+        .PC(PC)
+            );
+            
+    IF uut(
+        .clock(clock),
+        .PC(PC),
+        .IFIDIR(IFIDIR),
+        .IMemory(IMemory)
+        );
+        
+    DE uut();
 
     EX uut(
-        .clk(clock),
+        .clock(clock),
         .IDEXA(IDEXA),              // ID/EX pipeline register value A
         .IDEXB(IDEXB),              // ID/EX pipeline register value B
         .IDEXIR(IDEXIR),            // ID/EX pipeline register instruction
         .EXMEMALUOut(EXMEMALUOut),  // EX/MEM pipeline register ALU value
         .EXMEMIR(EXMEMIR)           // EX/MEM pipeline register instruction
         );
+        
+    MEM uut();
+    WB uut();
     
     initial begin
         #1;//wait for input ports to initialize
